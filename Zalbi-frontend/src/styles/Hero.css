@@ -176,7 +176,7 @@
 .datetime-section {
   display: flex;
   gap: 30px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .datetime-group {
@@ -198,10 +198,10 @@
 
 .datetime-option {
   flex: 1;
-  padding: 12px 13px;
+  padding: 12px 0 12px 12px;
   border: 2px solid #f0f0f0;
   border-radius: 10px;
-  background: white;
+  background: rgb(255, 255, 255);
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 500;
@@ -219,19 +219,26 @@
   border-color: #000;
 }
 
+.action-b{
+  display: flex;
+  width: 100%;
+  /* background-color: #999; */
+  padding:0 1rem 1rem 1rem; 
+  justify-content: flex-start;
+}
 /* Button styling */
 .see-prices-btn {
   background: #000;
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 18px 30px;
-  font-size: 1.1rem;
+  padding:  2px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 20px;
   transition: all 0.3s ease;
-  width: 100%;
+  padding: 1rem;
+
 }
 
 .see-prices-btn:hover {
@@ -241,10 +248,19 @@
 }
 
 .login-prompt {
+  height: 2rem;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
   text-align: center;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 0 1rem;
+  border-bottom:1.5px solid #a78a8a;
+}
+.login-prompt:hover {
+  color: #ce4242;
+
 }
 
 /* Right section styling */
