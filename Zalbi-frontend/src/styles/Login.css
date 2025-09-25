@@ -1,0 +1,189 @@
+/*Reg*/
+/* dark overlay */
+.login_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content:center; 
+  z-index: 1000;
+}
+
+/* sheet popup */
+.login_sheet {
+  background: #fff;
+  width: 70%;
+  max-width: 90%;
+  height: 90%;
+  padding: 100px;
+  margin-top: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  animation: slideDown 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* animation
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}*/
+
+/* option cards */
+.options-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.option-card {
+  height: 320px;
+  width: 300px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.option-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.option-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* prevents stretching */
+  margin-bottom: 10px;
+}
+
+.option-card h3 {
+  margin-top: auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.reg-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background: #1d4ed8;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+
+/*LOGIN REG BUTTON*/
+.login-reg-section {
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* Buttons + "or" text inline */
+.login-reg-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons styling */
+.reg-btn,
+.login-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+}
+
+.reg-btn {
+  background: #2563eb; /* blue */
+}
+
+.reg-btn:hover {
+  background: #1d4ed8;
+}
+
+.login-btn {
+  background: #10b981; /* green */
+}
+
+.login-btn:hover {
+  background: #059669;
+}
+
+/* "or" text */
+.or-text {
+  margin: 0 8px;
+  font-weight: bold;
+  color: #444;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cta-or-text{
+  margin: 0 8px;
+  font-weight: bold;
+  color: #ecf4f1;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+
+}
+
+.cta-reg-btn{
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  background: #10b981
+}
+

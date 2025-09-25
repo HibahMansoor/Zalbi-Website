@@ -1,0 +1,442 @@
+/* Rider Registration Overlay 
+.Rider_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal sheet 
+.Rider_sheet {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Heading 
+.Rider_sheet h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+/* Form 
+.Rider_Reg_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Inputs 
+.Rider_Reg_form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.Rider_Reg_form input:focus {
+  border-color: #4cafef;
+  box-shadow: 0 0 0 2px rgba(76, 175, 239, 0.2);
+}
+
+/* Submit Button 
+.reg-btn {
+  padding: 12px;
+  border: none;
+  background: #4cafef;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reg-btn:hover {
+  background: #389edc;
+}
+
+/* Login link 
+.forgot-password {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.forgot-password a {
+  color: #4cafef;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Close button 
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #d32f2f;
+}
+
+/* Animation 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+*/
+/* 
+/* =========================
+   Form Container
+========================= *
+.wizard-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.wizard-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+/* =========================
+   Progress Bar
+========================= *
+.progress-bar {
+  height: 14px;
+  background: #e9ecef;
+  border-radius: 7px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #22d3ee);
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   Form Styles
+========================= /
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* More space between fields *
+}
+
+.form-card {
+  background: #fafafa;
+  padding: 25px 30px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-card h3 {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* =========================
+   Phone with OTP
+========================= *
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Adds breathing space /
+}
+
+.phone-input input {
+  flex: 1;
+}
+
+.phone-input button {
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.phone-input button:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   File Upload
+========================= /
+input[type="file"] {
+  display: none;
+}
+
+.file-upload {
+  border: 2px dashed #cbd5e1;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+  background: #f1f5f9;
+  border-color: #2563eb;
+}
+
+.file-upload span {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =========================
+   Buttons
+========================= /
+.buttons_steps {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  gap: 15px;
+}
+
+.button {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+button.back {
+  background: #6b7280;
+  color: white;
+}
+
+button.next {
+  background: #2563eb;
+  color: white;
+}
+
+button.submit {
+  background: #16a34a;
+  color: white;
+} */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* dark transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* stays above everything */
+}
+
+/* Popup container */
+.container {
+  width: 350px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+  color: green;
+}
+
+/* Input group with icons */
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.input-group .icon {
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Gender buttons */
+.gender-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.gender-group button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid green;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gender-group button:hover {
+  background: #f0fff0;
+}
+
+.gender-group .active {
+  background: green;
+  color: white;
+}
+
+/* Date of Birth */
+.dob_container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+.dob_p {
+  
+}
+
+.dob select {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: darkgreen;
+}
+
+/* Smooth popup animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
