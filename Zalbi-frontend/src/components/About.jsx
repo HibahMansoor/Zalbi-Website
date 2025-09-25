@@ -2,7 +2,7 @@ import React from "react";
 import aboutImg from "../assets/About.png";
 import "../styles/About.css";
 
-export default function About() {
+export default function bout() {
   return (
     <section id="about" className="about section">
       <div className="section__grid">
