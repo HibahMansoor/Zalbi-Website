@@ -1,0 +1,262 @@
+/* AccountDetails.css */
+.account-details-container {
+  max-width: 1200px;
+  height: 80%;
+  margin: 0 auto;
+  padding: 80px 55px;
+  background-color: #ffffff;
+}
+
+.account-details-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.account-text-section {
+  flex: 1;
+  text-align: left;
+  max-width: 500px;
+}
+
+.account-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+.account-description {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0 0 40px 0;
+}
+
+.account-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 1rem 1rem 1rem 0rem;
+}
+
+.login-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.login-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.create-account-btn {
+  background: transparent;
+  color: #000000;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.create-account-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.create-account-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.create-account-btn:hover::before {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.create-account-btn:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition-delay: 0.3s;
+}
+
+.create-account-btn:hover {
+  color: #000000;
+  transform: translateY(-2px);
+}
+.account-right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+}
+
+.account-image {
+  margin-top: 2rem;
+  width: 100%;
+  height: 100% ;
+  max-width: 800px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .account-details-content {
+    gap: 3rem;
+  }
+  
+  .account-title {
+    font-size: 2rem;
+  }
+  
+  .account-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .account-details-container {
+    padding: 60px 20px;
+  }
+  
+  .account-details-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .account-text-section {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .account-title {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+  
+  .account-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .account-buttons {
+    align-items: center;
+  }
+  
+  .login-btn,
+  .create-account-btn {
+    padding: 14px 28px;
+    font-size: 0.95rem;
+    max-width: 250px;
+  }
+  
+  .account-right-section {
+    max-width: 100%;
+    order: -1;
+  }
+  
+  .account-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-details-container {
+    padding: 40px 15px;
+  }
+  
+  .account-details-content {
+    gap: 2rem;
+  }
+  
+  .account-title {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .account-description {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+  
+  .account-buttons {
+    gap: 12px;
+  }
+  
+  .login-btn,
+  .create-account-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    max-width: 220px;
+  }
+  
+  .account-image {
+    max-width: 250px;
+  }
+}
+
+/* Animation */
+.account-text-section,
+.account-right-section {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.account-right-section {
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth transitions */
+.account-details-content {
+  transition: all 0.3s ease;
+}

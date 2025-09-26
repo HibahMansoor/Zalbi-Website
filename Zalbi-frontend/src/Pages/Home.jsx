@@ -5,6 +5,8 @@ import Hero from "../components/Hero";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import Suggestions from '../components/Suggestions';
+import AccountDetails from '../components/AccountDetails';
+
 
 
 export default function Home() {
@@ -13,6 +15,7 @@ export default function Home() {
       <Navbar />
         <Hero/>
         <Suggestions />
+        <AccountDetails />
         <Plans />
         <CTA />
       <Footer />

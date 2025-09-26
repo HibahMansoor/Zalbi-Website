@@ -10,7 +10,7 @@ const Suggestions = () => {
     {
       id: 1,
       category: "Ride",
-      title: "Go anywhere with Uber Request a ride, hop in, and go.",
+      title: "Go anywhere with zilbili Request a ride, hop in, and go.",
       image: rideImage
     },
     {
